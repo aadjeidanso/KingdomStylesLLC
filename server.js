@@ -65,7 +65,7 @@ app.use(cors());
 //app.use(bodyParser.json()); // Parse JSON bodies
 
 // Serve static files from frontend
-app.use(express.static('../frontend'));
+app.use(express.static('/frontend'));
 
 // Stripe webhook endpoint
 app.post('/webhook', bodyParser.raw({ type: 'application/json' }), async (req, res) => {
