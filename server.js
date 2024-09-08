@@ -140,8 +140,8 @@ app.post('/create-checkout-session', async (req, res) => {
                 quantity: 1,
             }],
             mode: 'payment',
-            success_url: 'http://localhost:5001/booking.html#categories',
-            cancel_url: 'http://localhost:5001/booking.html#appointment-form',
+            success_url: 'https://hidden-citadel-47421-5dbe307f07e9.herokuapp.com/booking.html',
+            cancel_url: 'https://hidden-citadel-47421-5dbe307f07e9.herokuapp.com/booking.html#appointment-form',
             customer_email: email,
             metadata: {
                 firstName,
