@@ -63,6 +63,11 @@ app.use(cors());
 
 //app.use(bodyParser.json()); // Parse JSON bodies
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
+});
+
+
 // Serve static files from frontend
 //app.use(express.static('/frontend'));
 
