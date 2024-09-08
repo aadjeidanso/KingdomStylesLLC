@@ -9,8 +9,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const app = express();
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false }).then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
 // Define the booking schema
@@ -65,7 +64,11 @@ app.use(cors());
 //app.use(bodyParser.json()); // Parse JSON bodies
 
 // Serve static files from frontend
-app.use(express.static('/frontend'));
+//app.use(express.static('/frontend'));
+
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'frontend')));
+
 
 // Stripe webhook endpoint
 app.post('/webhook', bodyParser.raw({ type: 'application/json' }), async (req, res) => {
