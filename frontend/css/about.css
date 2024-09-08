@@ -1,0 +1,697 @@
+/* ----------------------------------------------- */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(150, 150, 150, 0.98);
+    color: #fff;
+    padding: 0rem 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+}
+#bus {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    margin: 0 auto;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container .business-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+}
+
+header nav button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 1;
+    /* margin-bottom: 60px;*/
+    /* Adjust this value if needed */
+}
+
+main .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main #about {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+
+footer {
+    background: rgba(150, 150, 150, 0.95);
+    ;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    z-index: 1;
+    margin-top: auto;
+    position: relative;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#user-icon i {
+    color: #391187;
+}
+
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+        padding: 30px 0;
+    }
+
+    #nav-links.show {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(130, 126, 133, 0.4);
+        padding: 10px 0;
+        border-radius: 5px;
+        width: 120px;
+        /* Adjust width to fit content */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        left: -50px;
+        /* Adjust position to move it more to the left */
+    }
+
+    header nav {
+        position: relative;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+
+    #nav-toggle i {
+        color: #391187;
+        font-size: 24px;
+    }
+}
+
+
+
+/* About Us Section */
+
+
+#about-us {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #fff;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+#about-us .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#about-us .text-container {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+}
+
+#about-us .intro {
+    color: #6e27c5;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about-us .description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#about-us .book-now-button {
+    display: inline-block;
+    background-color: #6e27c5;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#about-us .book-now-button:hover {
+    background-color: #5a20a4;
+}
+
+#about-us .image-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+#about-us .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about-us .text-container {
+        padding-right: 0;
+    }
+
+    #about-us .image-container {
+        margin-top: 20px;
+    }
+}
+
+
+
+/* Our values section */
+
+#values {
+
+
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(49, 47, 47, 0.5);
+
+    padding: 2px;
+    text-align: center;
+    color: white;
+    font-size: x-large;
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 10rem;
+    /*to change spacing between this and item after it */
+}
+
+#values h2 {
+    font-size: 2rem;
+    color: #fefdff;
+}
+
+.values-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px;
+    margin-bottom: 2rem;
+}
+
+.value-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+    width: 35%;
+    text-align: left;
+
+
+
+}
+
+.value-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.value-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/*----why choose us------ */
+#why-choose-us {
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    padding: 2px;
+    text-align: center;
+    color: white;
+    font-size: x-large;
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 8rem;
+    /*to change spacing between this and item after it */
+}
+
+#why-choose-us .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#why-choose-us .image-container {
+    flex: 1;
+    min-width: 100px;
+    margin-right: 50px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+
+}
+
+#why-choose-us .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#why-choose-us .text-container {
+    flex: 2;
+    min-width: 300px;
+    text-align: left;
+}
+
+#why-choose-us h2 {
+    font-size: 2.5rem;
+    color: #391187;
+}
+
+#why-choose-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+#why-choose-us ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-right: 2rem;
+}
+
+#why-choose-us ul li i {
+    font-size: 1.5rem;
+    color: #391187;
+    margin-right: 10px;
+}
+
+#why-choose-us ul li h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.25rem;
+    color: #391187;
+}
+
+#why-choose-us ul li p {
+    margin: 0;
+    color: #486776;
+    margin-left: 3rem;
+}
+
+@media (max-width: 768px) {
+    #why-choose-us .container {
+        flex-direction: column;
+    }
+
+    #why-choose-us .image-container {
+        margin-top: 20px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+    #why-choose-us .text-container {
+        text-align: center;
+    }
+
+    #why-choose-us ul li {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 2rem;
+    }
+
+    #why-choose-us ul li i {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* ---- business hours  --- */
+#business-hours {
+    width:80%;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    
+    background-color: rgba(66, 64, 64, 0.1);
+
+    padding: 20px;
+    text-align: left;
+    color: rgb(14, 14, 14);
+    font-size: x-large;
+
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+
+    /*to change spacing between this and item after it */
+
+
+
+}
+
+#business-hours .container {
+  
+    max-width: 400px;
+    margin: 0 auto;
+    /* new addition*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#business-hours h2 {
+    font-size: 2.5rem;
+    color: #391187;
+    margin-bottom: 20px;
+}
+
+#business-hours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+#business-hours ul li {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#business-hours ul li span:first-child {
+    font-weight: bold;
+    margin-right: 3rem;
+}
+
+#business-hours h3 {
+    font-size: 1rem;
+    color: #320638;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/* testimonials section */
+/* Testimonial Section */
+.testimonial-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px 0;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom:1rem;
+   
+}
+
+.testimonial-section h2 {
+    color: #391187;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.carousel-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 10px;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 2rem;
+}
+
+.carousel-item .stars {
+    color: gold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.carousel-item p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.carousel-item h3 {
+    color: #391187;
+    font-size: 1.2rem;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Call to Action Section */
+#call-to-action {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px 0;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+}
+
+#call-to-action .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#call-to-action p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#call-to-action h2 {
+    color: #391187;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#call-to-action .book-now-button {
+    display: inline-block;
+    background-color: #4A00E0;
+    /* Purple color */
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    /* Adjust spacing as needed */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#call-to-action .book-now-button:hover {
+    background-color: #3a00b0;
+    /* Darker purple for hover effect */
+}
+
+
+/* book now button */
+/* Add this new style for the book now button */
+.book-now-button {
+    display: inline-block;
+    background-color: #4A00E0;
+    /* Purple color */
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    /* Adjust spacing as needed */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #3a00b0;
+    /* Darker purple for hover effect */
+}
+
+
+/* our policy button */
+/* Add this new style for the our policy button */
+.policybutton {
+    display: inline-block;
+    background-color: #2d25a5;
+    /* Purple color */
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    /* Adjust spacing as needed */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.policybutton:hover {
+    background-color: #1e9e3e;
+    /* Darker purple for hover effect */
+}
+
+/* ----------- */
+/* Back to Top button styles */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Ensure the icon is centered */
+.back-to-top i {
+    line-height: inherit;
+}

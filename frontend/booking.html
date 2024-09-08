@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingdom Styles LLC</title>
+  <link rel="stylesheet" href="css/booking.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Business Logo" class="business-logo">
+        <h1 id="bus">Kingdom Styles LLC</h1>
+      </div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="booking.html">SERVICES / BOOKING</a></li>
+          <button id="user-icon"><a href="login.html"><i class="fas fa-user"></i></a></button>
+        </ul>
+        <button id="nav-toggle"><i class="fas fa-bars"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="categories" id="categories">
+      <div class="notice">
+        <p>Prior to making a reservation, kindly review our <a href="policy.html">booking policy</a>. When you proceed
+          with
+          booking an appointment, you are acknowledging your agreement to adhere to our booking policy.</p>
+      </div>
+
+      <h2>Choose a category...</h2>
+      <div class="category" data-category="A. Feed-In Braids | Cornrows | Stitch Braids">
+        <span>A. Feed-In Braids | Cornrows | Stitch Braids</span>
+        <button class="select-btn">Select</button>
+      </div>
+      <div class="category" data-category="B. Twists">
+        <span>B. Twists</span>
+        <button class="select-btn">Select</button>
+      </div>
+
+      <div class="category" data-category="C. Box Braids & Knotless">
+        <span>C. Box Braids & Knotless</span>
+        <button class="select-btn">Select</button>
+      </div>
+      
+      <div class="category" data-category="D. Crochet">
+        <span>D. Crochet</span>
+        <button class="select-btn">Select</button>
+      </div>
+
+      <div class="category" data-category="E. Bohemian / Gypsy Knotless Braids">
+        <span>E. Bohemian / Gypsy Knotless Braids</span>
+        <button class="select-btn">Select</button>
+      </div>
+
+      <div class="category" data-category="F. Half Feed-in Half Box Braids (Tribal / Fulani Braids)">
+        <span>F. Half Feed-in Half Box Braids (Tribal / Fulani Braids)</span>
+        <button class="select-btn">Select</button>
+      </div>
+
+      <div class="category" data-category="G. Ponytail Braids">
+        <span>G. Ponytail Braids</span>
+        <button class="select-btn">Select</button>
+      </div>
+
+      <div class="category" data-category="H. Kids Special">
+        <span>H. Kids Special</span>
+        <button class="select-btn">Select</button>
+      </div>
+
+      <div class="category" data-category="I. Men's styles">
+        <span>I. Men's styles</span>
+        <button class="select-btn">Select</button>
+      </div>
+
+
+      <!-- Add more categories as needed -->
+    </div>
+
+    <div class="subcategories" id="subcategories" style="display:none;">
+      <a href="#" id="back-to-categories"><i class="fas fa-arrow-left"></i> VIEW ALL CATEGORIES</a>
+      <h2 id="subcategory-title">Subcategories</h2>
+      <div id="subcategory-list"></div>
+    </div>
+
+    <div class="appointment-details" id="appointment-details" style="display:none;">
+      <a href="#" id="back-to-subcategories"><i class="fas fa-arrow-left"></i> VIEW ALL APPOINTMENTS</a>
+      <div id="appointment-info"></div>
+    </div>
+
+    <div class="date-time-section" id="date-time-section" style="display:none;">
+      <div class="combined-box">
+        <div class="appointment-info" id="combined-appointment-info"></div>
+        <div class="date-time-selection">
+          <h2>Select Date and Time</h2>
+          <div class="calendar-time">
+            <div class="calendar" id="calendar"></div>
+            <div class="time-slots" id="time-slots"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="appointment-form" id="appointment-form" style="display:none;">
+      <a href="#" id="back-to-date-time"><i class="fas fa-arrow-left"></i> BACK TO PREVIOUS PAGE</a>
+      <div>
+        <label for="first-name">First Name *</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+      <div>
+        <label for="last-name">Last Name *</label>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
+      <div>
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div id="warning-message" style="color: red; display: none;"></div>
+      <button id="pay-deposit-btn">Pay $15 Deposit Now</button>
+    </div>
+
+    <!-- Payment Modal -->
+
+
+  </main>
+
+  <a href="#" class="back-to-top" id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

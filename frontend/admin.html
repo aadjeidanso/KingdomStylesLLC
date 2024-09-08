@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom Styles LLC</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Business Logo" class="business-logo">
+                <h1 id="bus">Kingdom Styles LLC</h1>
+            </div>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="admin.html">DASHBOARD</a></li>
+                    <button id="user-icon"><a href="login.html"><i class="fas fa-user"></i></a></button>
+                </ul>
+                <button id="nav-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="images/logos.png" alt="Business Logo" class="business-logo">
+            </div>
+            <ul>
+                <li><a href="#bookings" id="bookings-link"><i class="fas fa-calendar-alt"></i> BOOKINGS</a></li>
+                <li><a href="#customer-details" id="customer-details-link"><i class="fas fa-users"></i> CUSTOMER
+                        DETAILS</a></li>
+                <li><a href="#task-management" id="task-management-link"><i class="fas fa-tasks"></i> TASK
+                        MANAGEMENT</a></li>
+                <li><a href="#block-calendar" id="block-calendar-link"><i class="fas fa-ban"></i> Block Out Calendar</a>
+                </li>
+                <li><a href="#open-calendar" id="open-calendar-link"><i class="fas fa-calendar"></i> Open Blocked
+                        Calendar</a></li>
+                <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- Default logo view -->
+            <div id="default-view">
+                <img src="images/logo.png" alt="KSLLC Logo" class="full-logo">
+            </div>
+            <!-- Bookings will be hidden initially -->
+            <div id="bookings" style="display:none;">
+                <div class="bookings-header">
+                    <a href="#new-bookings" class="booking-box new-bookings">
+                        <span class="booking-count">0</span>
+                        <span class="booking-label">NEW BOOKINGS</span>
+                    </a>
+                    <a href="#past-bookings" class="booking-box past-bookings">
+                        <span class="booking-count">0</span>
+                        <span class="booking-label">PAST BOOKINGS</span>
+                    </a>
+                </div>
+                <div class="table-container" id="new-bookings">
+                    <h2>New Bookings</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Customer Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                                <th>Appointment Date</th>
+                                <th>Appointment Time</th>
+                                <th>Payment Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookings-body">
+                            <!-- Booking details will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container" id="past-bookings" style="display:none;">
+                    <h2>Past Bookings</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Customer Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                                <th>Appointment Date</th>
+                                <th>Appointment Time</th>
+                                <th>Payment Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="past-bookings-body">
+                            <!-- Past booking details will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Customer Details will be hidden initially -->
+            <div id="customer-details" style="display:none;">
+                <h2>Customer Details</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                                <th>Appointment Date</th>
+                                <th>Appointment Time</th>
+                                <th>Payment Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customer-details-body">
+                            <!-- Booking details will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Task Management will be hidden initially -->
+            <div id="task-management" style="display:none;">
+                <div class="bookings-header">
+                    <a href="#confirmed-bookings" class="booking-box confirmed-bookings">
+                        <span class="booking-count">0</span>
+                        <span class="booking-label">CONFIRMED BOOKINGS</span>
+                    </a>
+                    <a href="#canceled-bookings" class="booking-box canceled-bookings">
+                        <span class="booking-count">0</span>
+                        <span class="booking-label">CANCELED BOOKINGS</span>
+                    </a>
+                    <a href="#rescheduled-bookings" class="booking-box rescheduled-bookings">
+                        <span class="booking-count">0</span>
+                        <span class="booking-label">RESCHEDULED BOOKINGS</span>
+                    </a>
+                </div>
+                <div class="table-container" id="confirmed-bookings">
+                    <h2>Confirmed Bookings</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Customer Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                                <th>Appointment Date</th>
+                                <th>Appointment Time</th>
+                                <th>Payment Date</th>
+                                <th>Completed</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="confirmed-bookings-body">
+                            <!-- Confirmed booking details will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container" id="canceled-bookings" style="display:none;">
+                    <h2>Canceled Bookings</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Customer Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                                <th>Appointment Date</th>
+                                <th>Appointment Time</th>
+                                <th>Payment Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="canceled-bookings-body">
+                            <!-- Canceled booking details will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container" id="rescheduled-bookings" style="display:none;">
+                    <h2>Rescheduled Bookings</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Customer Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                                <th>Old Appointment Date</th>
+                                <th>Old Appointment Time</th>
+                                <th>New Appointment Date</th>
+                                <th>New Appointment Time</th>
+                                <th>Payment Date</th>
+                                <th>Completed</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rescheduled-bookings-body">
+                            <!-- Rescheduled booking details will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Block Out Calendar will be hidden initially -->
+            <div id="block-calendar" style="display:none;">
+                <h2 id="bcc">Block Out Calendar</h2>
+                <div class="block-calendar-container">
+                    <div id="block-message" style="display:none; color: green; margin-bottom: 1rem;"></div>
+                    <label for="block-start-date">FROM:</label>
+                    <input type="date" id="block-start-date" name="block-start-date">
+                    <label for="block-end-date">TO:</label>
+                    <input type="date" id="block-end-date" name="block-end-date">
+                    <button id="block-calendar-btn">BLOCK</button>
+                </div>
+            </div>
+            <!-- Open Blocked Calendar will be hidden initially -->
+            <div id="open-calendar" style="display:none;">
+                <h2 id="bcc">Open Blocked Calendar</h2>
+                <div class="block-calendar-container">
+                    <div id="open-message" style="display:none; color: green; margin-bottom: 1rem;"></div>
+                    <label for="open-start-date">FROM:</label>
+                    <input type="date" id="open-start-date" name="open-start-date">
+                    <label for="open-end-date">TO:</label>
+                    <input type="date" id="open-end-date" name="open-end-date">
+                    <button id="open-calendar-btn">OPEN</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="#" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Reschedule Modal -->
+    <div id="rescheduleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reschedule Appointment</h2>
+            <form id="reschedule-form">
+                <label for="new-app-date">New Appointment Date:</label>
+                <input type="date" id="new-app-date" name="new-app-date" required>
+                <label for="new-app-time">New Appointment Time:</label>
+                <input type="time" id="new-app-time" name="new-app-time" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/scriptsadmin.js"></script>
+</body>
+
+</html>

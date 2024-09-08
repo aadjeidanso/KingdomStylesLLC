@@ -1,0 +1,58 @@
+KingdomStylesLLC/
+├── frontend/
+│   ├── css/
+│   │   └── about.css
+|   |   └── admin.css
+|   |   └── booking.css
+|   |   └── gallery.css
+|   |   └── index.css
+|   |   └── login.css
+|   |   └── policy.css
+|   |   
+│   ├── js/
+│   │   └── scripts.js
+|   |   └── scriptsabout.js
+|   |   └── scriptslogin.js 
+|   | 
+|   | 
+|   |---videos/ 
+|   |   └── (all videos here) 
+|   |
+|   |
+│   ├── images/
+│   │   └── (all images here)
+│   ├── index.html
+│   ├── login.html
+│   ├── gallery.html
+│   ├── booking.html
+│   ├── policy.html
+│   ├── about.html
+│   └── admin.html
+├── backend/
+│   ├── controllers/
+│   │  
+│   │   
+│   │   
+│   │   
+│   ├── models/
+│   │  
+│   │   
+│   │   
+│   │   
+│   ├── routes/
+│   │   
+│   │--node_modules/   
+│   │   └── (all modules here)
+│   │   
+│   ├── config/
+│   │   ├── db.js
+│   │   └── keys.js
+|   |
+│   ├── middleware/
+│   │   
+│   ├── server.js
+|   |-- package-lock.json
+│   └── package.json
+├── database/
+│   └── kingdomStylesDB.sql
+└── README.md

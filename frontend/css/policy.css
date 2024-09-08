@@ -1,0 +1,296 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(150, 150, 150, 0.98);
+    color: #fff;
+    padding: 0rem 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+}
+/* ----------------------------------------------- */
+#bus {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    margin: 0 auto;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container .business-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+}
+
+header nav button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 1;
+    /* margin-bottom: 60px;*/
+    /* Adjust this value if needed */
+}
+
+main .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main #about {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main #work .gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+main #work .gallery img {
+    width: 32%;
+    height: auto;
+}
+
+footer {
+    background: rgba(150, 150, 150, 0.95);
+    ;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    z-index: 1;
+    margin-top: auto;
+    position: relative;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+
+
+footer .social a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+
+
+/* navigation toggling */
+#nav-toggle {
+    display: none;
+}
+
+#user-icon i {
+    color: #391187;
+}
+
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+        padding: 30px 0;
+    }
+
+    #nav-links.show {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(130, 126, 133, 0.4);
+        padding: 10px 0;
+        border-radius: 5px;
+        width: 120px;
+        /* Adjust width to fit content */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        left: -50px;
+        /* Adjust position to move it more to the left */
+    }
+
+    header nav {
+        position: relative;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+
+    #nav-toggle i {
+        color: #391187;
+        font-size: 24px;
+    }
+}
+
+
+/* Policy section */
+#policy {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+}
+
+#policy .centitem {
+    /* new addition*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+#policy h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    color: #491892;
+}
+
+#policy h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+    color: #491892;
+}
+
+#policy p,
+#policy ul {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+#policy ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+#policy ul li {
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* book now button */
+/* Add this new style for the book now button */
+.book-now-button {
+    display: inline-block;
+    background-color: #4A00E0;
+    /* Purple color */
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    /* Adjust spacing as needed */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #3a00b0;
+    /* Darker purple for hover effect */
+}
+
+
+/* ----------- */
+/* Back to Top button styles */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Ensure the icon is centered */
+.back-to-top i {
+    line-height: inherit;
+}

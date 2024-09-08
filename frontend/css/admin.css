@@ -1,0 +1,569 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/backadmin.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(150, 150, 150, 0.98);
+    color: #fff;
+    padding: 0.5rem 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+}
+
+#bus {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    margin: 0 auto;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container .business-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+}
+
+header nav button a {
+    color: #21012b;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    margin-top: 12rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 6rem;
+    background-color: #b5d6e1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: rgb(3, 3, 109);
+    color: #fff;
+    width: 230px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.sidebar .logo-container .business-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.sidebar ul li {
+    margin: 2rem 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #6f5d94;
+    color: #fff;
+    width: 70%;
+}
+
+.sidebar .logout {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+    margin-top: 3rem;
+}
+
+.sidebar .logout:hover {
+    background-color: #ec170c;
+    color: #fff;
+    width: 35%;
+}
+
+.sidebar .logout i {
+    margin-right: 8px;
+}
+
+.content {
+    flex: 1;
+    padding: 10px 0;
+    background-color: #ccebf6;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.table-container {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+#customer-details table,
+#bookings table,
+#confirmed-bookings table,
+#canceled-bookings table,
+#rescheduled-bookings table {
+    width: 99%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+#customer-details h2,
+#bookings h2,
+#confirmed-bookings h2,
+#canceled-bookings h2,
+#rescheduled-bookings h2 {
+    text-align: center;
+}
+
+#customer-details th,
+#bookings th,
+#confirmed-bookings th,
+#canceled-bookings th,
+#rescheduled-bookings th,
+#customer-details td,
+#bookings td,
+#confirmed-bookings td,
+#canceled-bookings td,
+#rescheduled-bookings td {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+}
+
+#customer-details th,
+#bookings th,
+#confirmed-bookings th,
+#canceled-bookings th,
+#rescheduled-bookings th {
+    background-color: #cfcccc;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+#customer-details tbody tr,
+#bookings tbody tr,
+#confirmed-bookings tbody tr,
+#canceled-bookings tbody tr,
+#rescheduled-bookings tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#customer-details tbody tr:nth-of-type(even),
+#bookings tbody tr:nth-of-type(even),
+#confirmed-bookings tbody tr:nth-of-type(even),
+#canceled-bookings tbody tr:nth-of-type(even),
+#rescheduled-bookings tbody tr:nth-of-type(even) {
+    background-color: #cfcccc;
+}
+
+#customer-details tbody tr:nth-of-type(odd),
+#bookings tbody tr:nth-of-type(odd),
+#confirmed-bookings tbody tr:nth-of-type(odd),
+#canceled-bookings tbody tr:nth-of-type(odd),
+#rescheduled-bookings tbody tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+#customer-details tbody tr:hover,
+#bookings tbody tr:hover,
+#confirmed-bookings tbody tr:hover,
+#canceled-bookings tbody tr:hover,
+#rescheduled-bookings tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+#bookings th:first-child,
+#bookings td:first-child,
+#confirmed-bookings th:first-child,
+#confirmed-bookings td:first-child {
+    width: 50px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+        padding: 30px 0;
+    }
+
+    #nav-links.show {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(130, 126, 133, 0.4);
+        padding: 10px 0;
+        border-radius: 5px;
+        width: 120px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        left: -50px;
+    }
+
+    header nav {
+        position: relative;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+
+    #nav-toggle i {
+        color: #391187;
+        font-size: 24px;
+    }
+
+    .content {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    #customer-details th,
+    #bookings th,
+    #customer-details td,
+    #bookings td,
+    #confirmed-bookings th,
+    #confirmed-bookings td,
+    #canceled-bookings th,
+    #canceled-bookings td,
+    #rescheduled-bookings th,
+    #rescheduled-bookings td {
+        white-space: nowrap;
+    }
+
+    #customer-details th:first-child,
+    #bookings th:first-child,
+    #customer-details td:first-child,
+    #bookings td:first-child,
+    #confirmed-bookings th:first-child,
+    #confirmed-bookings td:first-child {
+        position: sticky;
+        left: 0;
+        background: #cfcccc;
+        z-index: 1;
+    }
+
+    #customer-details th:nth-child(2),
+    #bookings th:nth-child(2),
+    #customer-details td:nth-child(2),
+    #bookings td:nth-child(2),
+    #confirmed-bookings th:nth-child(2),
+    #confirmed-bookings td:nth-child(2) {
+        position: sticky;
+        left: 50px;
+        background: #cfcccc;
+        z-index: 1;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.back-to-top i {
+    line-height: inherit;
+}
+
+/* Style for the default logo view */
+#default-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#default-view .full-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Styles for booking boxes */
+.bookings-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.booking-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    margin-right: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    text-decoration: none;
+}
+
+.booking-box.new-bookings {
+    background-color: #4CAF50;
+    margin-left: 1rem;
+}
+
+.booking-box.past-bookings {
+    background-color: #F44336;
+}
+
+.booking-box.confirmed-bookings {
+    background-color: #2196F3;
+    margin-left: 1rem;
+}
+
+.booking-box.canceled-bookings {
+    background-color: #FF9800;
+}
+
+.booking-box.rescheduled-bookings {
+    background-color: #9C27B0;
+}
+
+.booking-box .booking-count {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+}
+
+.booking-box:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Styles for Block Out Calendar and Open Blocked Calendar */
+.block-calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(66, 64, 64, 0.2);
+    border-radius: 20px;
+    width: 75%;
+    /* max-width: 400px; */
+}
+
+#bcc {
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.block-calendar-container label {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.block-calendar-container input {
+    margin-bottom: 2.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.block-calendar-container button {
+    margin-top: 3rem;
+    background-color: #060639;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.block-calendar-container button:hover {
+    background-color: #f60a0a;
+}
+
+
+
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#reschedule-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#reschedule-form label {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+#reschedule-form input {
+    margin-bottom: 16px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#reschedule-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reschedule-form button:hover {
+    background-color: #45a049;
+}
